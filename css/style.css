@@ -28,7 +28,7 @@ header .logo {
 
 .menu:hover {
   width: 215px;
-  background-color: #BBBBBB;
+  background-color: #C3C3C3;
 }
 
 .menu .nav-pills>li {
@@ -40,7 +40,7 @@ header .logo {
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
-  background-color: #BBBBBB;
+  background-color: #C3C3C3;
   padding: 0;
   transition: all 0.3s ease-in 0.3s;
   -moz-transition: all 0.3s ease-in 0.3s;
@@ -49,7 +49,7 @@ header .logo {
 
 .menu .nav-pills>li>a:hover,
 .menu .nav-pills>li>a:focus {
-  background-color: #BBBBBB;
+  background-color: #C3C3C3;
 }
 
 section {
@@ -57,7 +57,14 @@ section {
 }
 
 .services {
-  background: url("../img/city.jpg") no-repeat fixed center / cover;
+  /*background: url("../img/city.jpg") no-repeat fixed center / cover;*/
+  background-color: #2F2727;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#fff), to(#ccc));
+  background: -webkit-radial-gradient(circle, #fff, #ccc);
+  background: -moz-radial-gradient(circle, #fff, #ccc);
+  background: -ms-radial-gradient(circle, #fff, #ccc);
 }
 
 .about {
@@ -66,7 +73,13 @@ section {
 }
 
 .contact {
-  background: url("../img/footer.jpg") no-repeat fixed center / cover;
+  /*background: url("../img/footer.jpg") no-repeat fixed center / cover;*/
+  background: -webkit-radial-gradient(circle, #fff, #F4F4F4);
+  color: #4d4d4d;
+}
+
+.contact a {
+  color: #4d4d4d;
 }
 
 .switch input {
@@ -92,7 +105,7 @@ section {
 }
 
 .switch label {
-  color: #BBBBBB;
+  color: #C3C3C3;
   display: block;
   width: 150px;
   height: 100%;
@@ -113,7 +126,7 @@ section {
   position: absolute;
   left: 2px;
   top: 2px;
-  background: #BBBBBB; /* Fallback */
+  background: #C3C3C3; /* Fallback */
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding: 4px;
@@ -209,93 +222,29 @@ section {
 .city {
   position: relative;
   display: table;
-  margin: 100px auto;
+  margin: 60px auto;
+  width: 375px;
+  height: 250px;
 }
 
 .city .building {
- position: relative;
+ position: absolute;
  transform-style: preserve-3d;
- transform: rotateX(-20deg) rotateY(-45deg);
+ transform: rotateX(216deg) rotateY(-45deg);
  display: inline-block;
  vertical-align: bottom;
  z-index: 1;
-}
-
-.city .building.small {
-  width: 20px;
-  height: 20px;
-  margin: 0 4px;
-}
-
-.city .building.small .top {
-  width: 21px;
-  height: 20px;
-  margin-top: -10px;
-}
-
-.city .building.small .right {
-  width: 20px;
-  height: 50px;
-  margin-left: 10px;
-}
-
-.city .building.small .front {
-  width: 20px;
-  height: 50px;
-  transform: translateZ(10px);
-}
-
-.city .building.medium {
-  width: 30px;
-  height: 30px;
-  margin: 0 6px;
-}
-
-.city .building.medium .top {
-  width: 31px;
-  height: 30px;
-  margin-top: -15px;
-}
-
-.city .building.medium .right {
-  width: 30px;
-  height: 100px;
-  margin-left: 15px;
-}
-
-.city .building.medium .front {
-  width: 30px;
-  height: 100px;
-  transform: translateZ(15px);
-}
-
-.city .building.big {
-  width: 40px;
-  height: 40px;
-  margin: 0 8px;
-}
-
-.city .building.big .top {
-  width: 41px;
-  height: 40px;
-  margin-top: -20px;
-}
-
-.city .building.big .right {
-  width: 40px;
-  height: 150px;
-  margin-left: 20px;
-}
-
-.city .building.big .front {
-  width: 40px;
-  height: 150px;
-  transform: translateZ(20px);
+ width: 20px;
+ height: 20px;
+ margin: 0 4px;
 }
 
 .city .building .top {
+  width: 24px;
+  height: 24px;
+  margin-top: 40px;
   position: absolute;
-  background: #f0f0f0;
+  background-color: #ccc;
   transform: rotateX(90deg);
   transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -303,8 +252,11 @@ section {
 }
 
 .city .building .right {
+  width: 24px;
+  height: 50px;
+  margin-left: 12px;
   position: absolute;
-  background: #bbb;
+  background: #818182;
   transform: rotateY(90deg);
   transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -312,23 +264,274 @@ section {
 }
 
 .city .building .front {
+  width: 24px;
+  height: 50px;
+  transform: translateZ(12px);
   position: absolute;
-  background: #ccc;
+  background: #E7E7E7;
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
 }
 
-.floor {
-  padding: 55px 0;
-  width: 375px;
-  background-color: #e5e5e5;
-  -ms-transform: skew(70deg, -15deg);
-  -webkit-transform: skew(70deg, -15deg);
-  transform: skew(70deg, -20deg);
-  margin-top: 0px;
-  position: relative;
+.city .building.small .top {
+  margin-top: 28px;
+}
+
+.city .building.small .front {
+  height: 40px;
+}
+
+.city .building.small .right {
+  height: 40px;
+}
+
+.city .building.medium .top {
+  margin-top: 58px;
+}
+
+.city .building.medium .front {
+  height: 70px;
+}
+
+.city .building.medium .right {
+  height: 70px;
+}
+
+.city .building.large .top {
+  margin-top: 120px;
+}
+
+.city .building.large .front {
+  height: 133px;
+}
+
+.city .building.large .right {
+  height: 133px;
+}
+
+#building-1 {
+  left: 87px;
+  bottom: 17px;
+  z-index: 7;
+}
+
+#building-2 {
+  left: 64px;
+  bottom: 45px;
+  z-index: 5;
+}
+
+#building-3 {
+  left: 110px;
+  bottom: 31px;
+  z-index: 6;
+}
+
+#building-4 {
+  left: 94px;
+  bottom: 52px;
+  z-index: 4;
+}
+
+#building-5 {
+  left: 125px;
+  bottom: 53px;
+  z-index: 4;
+}
+
+#building-6 {
+  left: 180px;
+  bottom: 20px;
+  z-index: 6;
+}
+
+#building-7 {
+  left: 138px;
+  bottom: 45px;
+  z-index: 5;
+}
+
+#building-8 {
+  left: 172px;
+  bottom: 46px;
+  z-index: 5;
+}
+
+#building-9 {
+  left: 145px;
+  bottom: 80px;
+  z-index: 4;
+}
+
+#building-10 {
+  left: 227px;
+  bottom: 68px;
+  z-index: 6;
+}
+
+#building-11 {
+  left: 196px;
+  bottom: 78px;
+  z-index: 5;
+}
+
+#building-12 {
+  left: 144px;
+  bottom: 127px;
+  z-index: 3;
+}
+
+#building-13 {
+  left: 172px;
+  bottom: 106px;
+  z-index: 5;
+}
+
+#building-14 {
+  left: 184px;
+  bottom: 140px;
+  z-index: 4;
+}
+
+#building-15 {
+  left: 210px;
+  bottom: 101px;
+  z-index: 3;
+}
+
+#building-16 {
+  left: 237px;
+  bottom: 88px;
+  z-index: 3;
+}
+
+#building-17 {
+  left: 237px;
+  bottom: 88px;
+  z-index: 3;
+}
+
+#building-18 {
+  left: 264px;
+  bottom: 126px;
+  z-index: 2;
+}
+
+#building-19 {
+  left: 230px;
+  bottom: 175px;
+  z-index: 1;
+}
+
+#building-20 {
+  left: 244px;
+  bottom: 162px;
+  z-index: 1;
+}
+
+#logo_deg {
+  position: absolute;
+  width: 85px;
+  bottom: -40px;
+  left: 135px;
+}
+
+.city .light .front {
+  background-color: #DEDEDE;
+}
+
+.city .dark .right {
+  background-color: #737373;
+}
+
+.street {
+  height: 8px;
+  width: 300px;
+  position: absolute;
   z-index: 0;
+}
+
+.street.left {
+  -ms-transform: skew(70deg, -30deg);
+  -webkit-transform: skew(70deg, -30deg);
+  transform: skew(70deg, -30deg);
+}
+
+.street.right {
+  -ms-transform: skew(-60deg, 30deg);
+  -webkit-transform: skew(-60deg, 30deg);
+  transform: skew(-60deg, 30deg);
+}
+
+.street.light-blue {
+  background-color: #6098B0;
+}
+
+.street.blue {
+  background-color: #004470;
+}
+
+.street.green {
+  background-color: #008A3D;
+}
+
+.street.short {
+  width: 200px;
+}
+
+.street.thin {
+  height: 5px;
+}
+
+#street-1 {
+  top: 202px;
+  left: 30px;
+}
+
+#street-2 {
+  top: 162px;
+  left: 30px;
+}
+
+#street-3 {
+  top: 100px;
+  left: 50px;
+}
+
+#street-4 {
+  top: 210px;
+  left: 40px;
+}
+
+#street-5 {
+  top: 208px;
+  left: 92px;
+}
+
+#street-6 {
+  top: 188px;
+  left: 30px;
+}
+
+#street-7 {
+  top: 170px;
+  left: 30px;
+}
+
+#street-8 {
+  top: 152px;
+  left: 76px;
+}
+
+#street-9 {
+  top: 122px;
+  left: 117px;
+}
+
+#street-10 {
+  top: 112px;
+  left: 140px;
 }
 
 .well {
@@ -338,17 +541,47 @@ section {
 }
 
 .city .building.small.glow .top {
-  background-color: #000;
+  background-color: #68AA2E;
+  margin-top: 88px;
 }
 
 .city .building.small.glow .right {
+  background-color: #4C8F0A;
   height: 100px;
 }
 
 .city .building.small.glow .front {
+  background-color: #6BC72A;
   height: 100px;
 }
 
 .mid-size {
   width: 250px;
+}
+
+.parallax {
+  position: absolute;
+  width: 100%;
+}
+
+.parallax img {
+  width: 100%;
+}
+
+.parallax.back {
+  bottom: 10%;
+}
+
+.parallax.mid {
+  bottom: 7%;
+}
+
+.parallax.front {
+  bottom: 0;
+}
+
+.parallax.front .content {
+  background-color: #b3b3b3;
+  padding: 20px 0;
+  width: 100%;
 }

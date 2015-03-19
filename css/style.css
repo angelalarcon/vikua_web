@@ -540,17 +540,17 @@ section {
   -webkit-border-radius: 0;
 }
 
-.city .building.small.glow .top {
+.city .building.glow .top {
   background-color: #68AA2E;
   margin-top: 88px;
 }
 
-.city .building.small.glow .right {
+.city .building.glow .right {
   background-color: #4C8F0A;
   height: 100px;
 }
 
-.city .building.small.glow .front {
+.city .building.glow .front {
   background-color: #6BC72A;
   height: 100px;
 }

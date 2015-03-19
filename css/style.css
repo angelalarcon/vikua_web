@@ -68,7 +68,7 @@ section {
 }
 
 .about {
-  background: url("../img/city.gif") no-repeat fixed center / cover;
+  background: url("../img/vikua.gif") no-repeat fixed center / cover;
   padding: 100px 0;
 }
 
@@ -542,7 +542,7 @@ section {
 
 .city .building.glow .top {
   background-color: #68AA2E;
-  margin-top: 88px;
+  margin-top: 87px;
 }
 
 .city .building.glow .right {

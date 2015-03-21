@@ -254,7 +254,7 @@ section {
 .city .building .right {
   width: 24px;
   height: 50px;
-  margin-left: 12px;
+  margin-left: 11px;
   position: absolute;
   background: #818182;
   transform: rotateY(90deg);
@@ -542,7 +542,7 @@ section {
 
 .city .building.glow .top {
   background-color: #68AA2E;
-  margin-top: 107px;
+  margin-top: 108px;
 }
 
 .city .building.glow .right {

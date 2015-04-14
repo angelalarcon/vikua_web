@@ -832,6 +832,7 @@ section.staff {
   background-color: #dbdbdb;
   border: 2px solid #dbdbdb;
   display: none;
+  padding: 25px;
 }
 
 .profile-info.right {

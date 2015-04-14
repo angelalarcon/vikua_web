@@ -24,17 +24,11 @@ $(document).ready(function(){
 	$('#close_tab').click(function() {
 		$('.menu ul li').removeClass('active');
 		$('#city_container').css('width', '100%');
-		$('#city_info').removeClass('show-info')
-		$('.services').removeClass('push_sidebar')
+		$('#city_info').removeClass('show-info');
+		$('.services').removeClass('push_sidebar');
+		$(".building").removeClass('glow');
 	});
 
-	if ($(window).scrollTop() > $('#home').height() + $('#box-1').height() + $('#box-2').height()) {
-		$('#box-3 .bordered-white').addClass('move-left');
-	}
-	else {
-		$('#box-3 .bordered-white').removeClass('move-left');
-	}
-	
 	$('#tablink-1').mouseover(function() {
 		$('#message_1').show();
 	});
@@ -78,13 +72,13 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function() {
-		if ($(window).scrollTop() > $('.services').height() + $('.about').height()) {
+		if ($(window).scrollTop() > $('.services').height() + $('.staff').height() + $('.about').height()) {
 			$('.parallax-layer.back').addClass('up');
 		}
 		else {
 			$('.parallax-layer.back').removeClass('up');
 		}
-		if ($(window).scrollTop() > $('.services').height() + $('.about').height()) {
+		if ($(window).scrollTop() > $('.services').height() + $('.staff').height() + $('.about').height()) {
 			$('.parallax-layer.mid').addClass('up');
 		}
 		else {

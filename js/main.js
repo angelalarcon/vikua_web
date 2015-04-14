@@ -77,4 +77,19 @@ $(document).ready(function(){
 		$('#message_6').hide();
 	});
 
+	$(window).scroll(function() {
+		if ($(window).scrollTop() > $('.services').height() + $('.about').height()) {
+			$('.parallax-layer.back').addClass('up');
+		}
+		else {
+			$('.parallax-layer.back').removeClass('up');
+		}
+		if ($(window).scrollTop() > $('.services').height() + $('.about').height()) {
+			$('.parallax-layer.mid').addClass('up');
+		}
+		else {
+			$('.parallax-layer.mid').removeClass('up');
+		}
+	});
+
 });

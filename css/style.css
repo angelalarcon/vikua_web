@@ -559,31 +559,6 @@ section {
   width: 250px;
 }
 
-.parallax-viewport {
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  bottom: 200px;
-}
-
-.parallax-layer {
-  position: absolute;
-  top: inherit !important;
-}
-
-.parallax-layer.back {
-  bottom: 7%;
-}
-
-.parallax-layer.mid {
-  bottom: 4%;
-}
-
-.parallax-layer.front {
-  bottom: 0;
-}
-
 .content {
   background-color: #b3b3b3;
   padding: 20px 0;
@@ -596,20 +571,6 @@ section {
   transition: width 0.5s;
   -moz-transition: width 0.5s;
   -webkit-transition: width 0.5s;
-}
-
-#city_container:after {
-  content: '';
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  margin-top: -10px;
-  width: 0; 
-  height: 0; 
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid #dbdbdb;
-  z-index: 2;
 }
 
 #city_info {
@@ -627,6 +588,20 @@ section {
 
 #city_info.show-info {
   left: 50%;
+}
+
+#city_info.show-info:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #dbdbdb;
+  z-index: 2;
 }
 
 .services .row {
@@ -714,4 +689,74 @@ section {
   transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
+}
+
+.parallax-viewport {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  bottom: 200px;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: inherit !important;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+.parallax-layer img {
+  max-width: 100%;
+}
+
+.parallax-layer.back {
+  bottom: 35%;
+}
+
+.parallax-layer.back.up {
+  bottom: 10%;
+}
+
+.parallax-layer.back:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  background-color: #666;
+}
+
+.parallax-layer.mid {
+  bottom: 20%;
+}
+
+.parallax-layer.mid.up {
+  bottom: 5%;
+}
+
+.parallax-layer.mid:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  background-color: #808080;
+}
+
+.parallax-layer.front {
+  bottom: 0;
+}
+
+.parallax-layer.front:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  background-color: #B3B3B3;
 }

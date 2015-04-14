@@ -2,6 +2,10 @@ html {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -768,7 +772,7 @@ section {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #446A89;
-  margin: 10px 0;
+  margin: 20px 0;
   color: #446A89;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -831,8 +835,12 @@ section.staff {
   z-index: 2;
   background-color: #dbdbdb;
   border: 2px solid #dbdbdb;
-  display: none;
+  visibility:hidden;
+  opacity:0;
   padding: 25px;
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
 }
 
 .profile-info.right {
@@ -844,5 +852,6 @@ section.staff {
 }
 
 .profile:hover > .profile-info {
-  display: block;
+  visibility:visible;
+  opacity:1;
 }

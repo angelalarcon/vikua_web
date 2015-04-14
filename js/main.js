@@ -18,8 +18,15 @@ $(document).ready(function(){
 			$('#city_container').css('width', '100%');
 		};
 		
-		$('.message').css('opacity', '0');
+		$('.message').hide();
 	})
+
+	$('#close_tab').click(function() {
+		$('.menu ul li').removeClass('active');
+		$('#city_container').css('width', '100%');
+		$('#city_info').removeClass('show-info')
+		$('.services').removeClass('push_sidebar')
+	});
 
 	if ($(window).scrollTop() > $('#home').height() + $('#box-1').height() + $('#box-2').height()) {
 		$('#box-3 .bordered-white').addClass('move-left');
@@ -28,10 +35,46 @@ $(document).ready(function(){
 		$('#box-3 .bordered-white').removeClass('move-left');
 	}
 	
-	$('.menu .nav-pills li a').mouseover(function() {
-		$('.message').css('opacity', '1');
+	$('#tablink-1').mouseover(function() {
+		$('#message_1').show();
 	});
-	$('.menu .nav-pills li a').mouseout(function() {
-		$('.message').css('opacity', '0');
+	$('#tablink-1').mouseleave(function() {
+		$('#message_1').hide();
 	});
+
+	$('#tablink-2').mouseover(function() {
+		$('#message_2').show();
+	});
+	$('#tablink-2').mouseleave(function() {
+		$('#message_2').hide();
+	});
+
+	$('#tablink-3').mouseover(function() {
+		$('#message_3').show();
+	});
+	$('#tablink-3').mouseleave(function() {
+		$('#message_3').hide();
+	});
+
+	$('#tablink-4').mouseover(function() {
+		$('#message_4').show();
+	});
+	$('#tablink-4').mouseleave(function() {
+		$('#message_4').hide();
+	});
+
+	$('#tablink-5').mouseover(function() {
+		$('#message_5').show();
+	});
+	$('#tablink-5').mouseleave(function() {
+		$('#message_5').hide();
+	});
+
+	$('#tablink-6').mouseover(function() {
+		$('#message_6').show();
+	});
+	$('#tablink-6').mouseleave(function() {
+		$('#message_6').hide();
+	});
+
 });

@@ -642,7 +642,7 @@ section {
 }
 
 .message {
-  opacity: 0;
+  display: none;
   transition: all 0.3s;
   -moz-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -682,4 +682,36 @@ section {
   border-right: 15px solid transparent;
   border-bottom: 15px solid #fff;
   z-index: 2;
+}
+
+.button-close {
+  background: #dbdbdb;
+  height: 40px;
+  position: absolute;
+  width: 6px;
+  top: 20px;
+  right: 40px;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  z-index: 99;
+}
+
+.button-close:after {
+  background: #dbdbdb;
+  content: "";
+  height: 6px;
+  left: -17px;
+  position: absolute;
+  top: 17px;
+  width: 40px;
+}
+
+.button-close:hover {
+  transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
